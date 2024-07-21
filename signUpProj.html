@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="signUp.css">
+    <h1>Welcome...</h1>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="ink from water.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    
+    <div class="maindiv">
+    <div class="primarydiv">
+    <form>
+    
+        <fieldset>
+            <legend>Join with us</legend>
+            <div class="ot">
+            <div class="g"><label class="ag name">Name:</label></div>
+                <input class="gi" type="text">
+            
+        </div><br>
+             <div class="ot">
+            <div class="g"><label class="ag email">Email:</label></div>
+             <input  class="gi"  type="email">
+        </div><br>
+        <div class="ot">
+        <div class="g"><label class="ag pwd">Password:</label></div>
+            <input  class="gi" type="password" id="pwd">
+        </div><br>
+        <div>
+            <label class="ag sex">Gender:</label>
+            <input type="radio" class="sex" name="gend"><label>Female</label>
+            <input type="radio" class="sex" name="gend"><label>Male</label>
+            <input type="radio" class="sex" name="gend"><label>Others</label>
+        
+        </div>
+        <br>
+        <div>
+        <label for="referral-source" class="ag lab">How Did You Hear About Us?</label>
+    <select id="referral-source" name="referral-source">
+    <option value="social-media">Social Media</option>
+    <option value="friend">Friend</option>
+    <option value="advertisement">Advertisement</option>
+  </select>
+  
+            </div>
+            <br>
+            <div>
+            <div ><label class="ag news"></div>
+                <input type="checkbox" name="newsletter" checked>
+                Subscribe to our newsletter
+              </label>
+            </div>
+            
+
+            
+       </fieldset>
+        
+    </form>
+</div>
+<br>
+</div>
+<div class="btndiv"><button>Submit</button></div>
+
+
+
+<script>
+   
+        document.getElementById("login").addEventListener("click", function() {
+            let username = document.getElementById("ag name").value;
+            let password = document.getElementById("password").value;
+            
+            if (username === "user" && password === "password") {
+                alert("Login successful!");
+            } else {
+                document.getElementById("login-error").innerHTML = "Wrong password or username";
+            }
+        });
+  
+</script>
+</body>
+</html>
